@@ -18,10 +18,10 @@ class UserDao {
       ');';
 }
 
-save(User user) async {
-  // procurar todas tarefas existentes
-  Future<List<User>> findAll() async {}
-  Future<List<User>> find(String nomeUser) async {}
-  Future<Null> delete(String nomeUser) async {}
+save(User user) async {}
+// procurar todas tarefas existentes
+Future<List<User>> findAll() async {}
+Future<List<User>> find(String nomeUser) async {}
+Future<Null> delete(String nomeUser) async {}
   // deletar tarefa
-}
+

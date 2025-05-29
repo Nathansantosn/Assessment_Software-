@@ -1,4 +1,6 @@
-class EvaluationDao {
+import 'package:assessment_software/models/avaliacao.dart';
+
+class AvaliacaoDao {
   static const String _tableName = 'evaluations'; // Nome da tabela
   static const String _id = 'id';
   static const String _systemId = 'systemId';
@@ -31,3 +33,5 @@ class EvaluationDao {
     CREATE INDEX idx_${_tableName}_$_questionId ON $_tableName($_questionId);
   ''';
 }
+
+save(Avaliacao avaliacao) async {}

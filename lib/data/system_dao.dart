@@ -1,3 +1,5 @@
+import 'package:assessment_software/models/system.dart';
+
 class SystemDao {
   static const String _system = 'System';
   static const String _id = 'id';
@@ -13,3 +15,5 @@ class SystemDao {
       '$_createdAt TEXT NOT NULL, '
       ');';
 }
+
+save(System system) async {}

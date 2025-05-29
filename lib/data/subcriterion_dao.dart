@@ -1,3 +1,5 @@
+import 'package:assessment_software/models/subcriterion.dart';
+
 class SubcriterionDao {
   static const String _subcriterion = 'subcriterion';
   static const String _id = 'id';
@@ -11,3 +13,5 @@ class SubcriterionDao {
       '$_description  TEXT NOT NULL UNIQUE, '
       ');';
 }
+
+save(SubCriterion subCriterion) async {}

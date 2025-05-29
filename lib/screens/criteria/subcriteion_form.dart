@@ -18,6 +18,7 @@ class SubCriterionForm extends StatefulWidget {
 
 class _SubCriterionFormState extends State<SubCriterionForm> {
   final _formKey = GlobalKey<FormState>();
+  final _systemId = TextEditingController();
   final _nameController = TextEditingController();
   final _descriptionController = TextEditingController();
   final _idController = TextEditingController();
@@ -28,7 +29,7 @@ class _SubCriterionFormState extends State<SubCriterionForm> {
 
     // Preenche os valores se estiver editando
     if (widget.subCriterion != null) {
-      _idController.text = widget.subCriterion!.id;
+      _idController.text = _generateAutoId();
       _nameController.text = widget.subCriterion!.name;
       _descriptionController.text = widget.subCriterion!.description;
     } else {
@@ -125,6 +126,7 @@ class _SubCriterionFormState extends State<SubCriterionForm> {
     if (_formKey.currentState!.validate()) {
       final subCriterion = SubCriterion(
         id: _idController.text,
+        systemId: _systemId.text,
         name: _nameController.text,
         description: _descriptionController.text,
         weight:

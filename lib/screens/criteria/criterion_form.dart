@@ -13,6 +13,7 @@ class CriterionForm extends StatefulWidget {
 class _CriterionFormState extends State<CriterionForm> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
+  final _systemIdcontroller = TextEditingController();
   final _descriptionController = TextEditingController();
   final _idController = TextEditingController();
 
@@ -22,10 +23,12 @@ class _CriterionFormState extends State<CriterionForm> {
 
     if (widget.criterion != null) {
       _idController.text = widget.criterion!.id;
+      _systemIdcontroller.text = widget.criterion!.systemId;
       _nameController.text = widget.criterion!.name;
       _descriptionController.text = widget.criterion!.description;
     } else {
       _idController.text = _generateAutoId();
+      _systemIdcontroller.text = widget.criterion!.systemId;
       _nameController.text = widget.criterion!.name;
       _descriptionController.text = widget.criterion!.description;
     }
@@ -81,6 +84,8 @@ class _CriterionFormState extends State<CriterionForm> {
                       id: _idController.text,
                       name: _nameController.text,
                       description: _descriptionController.text,
+                      systemId:
+                          '', // TODO: Provide the appropriate systemId value here
                     );
                     // Salvar critério
                     Navigator.pop(context, criterion);

@@ -1,5 +1,6 @@
 class SubCriterion {
   final String id;
+  final String systemId;
   final String name;
   final String description;
   final double weight;
@@ -8,6 +9,7 @@ class SubCriterion {
 
   SubCriterion({
     required this.id,
+    required this.systemId,
     required this.name,
     required this.description,
     required this.weight,

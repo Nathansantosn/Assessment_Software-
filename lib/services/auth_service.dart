@@ -18,7 +18,7 @@ class AuthService with ChangeNotifier {
       password: 'dev123',
     ),
     User(
-      id: '2',
+      id: User.,
       name: 'Testador',
       email: 'tester@teste.com',
       role: UserRole.tester,

@@ -1,9 +1,9 @@
-class Evaluation {
-  final int id;
+class Avaliacao {
+  final String id;
   final int systemId;
   final int questionId;
 
-  Evaluation({
+  Avaliacao({
     required this.id,
     required this.systemId,
     required this.questionId,
